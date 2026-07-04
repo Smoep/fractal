@@ -2,6 +2,15 @@
 
 **A macOS radial action launcher driven entirely by your trackpad.**
 
+## Download
+
+[**→ Download Radial.zip from the latest release**](https://github.com/Smoep/radial/releases/latest)
+
+Unzip and drag **Radial.app** to your Applications folder.
+
+> **First launch:** macOS will show a security warning because the app is not signed with an Apple Developer certificate.
+> Right-click (or Control-click) the app → **Open** → **Open**. You only need to do this once.
+
 Touch and hold the trackpad, slide your finger to the action you want, then lift. No mouse movement, no keyboard hunting — just one fluid gesture.
 
 ![Radial Menu Concept](Radial%20Menu%20Concept%20Dma.jpg)
