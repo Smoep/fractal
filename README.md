@@ -58,8 +58,6 @@ cp -R build-release/Build/Products/Release/Radial.app /Applications/Radial.app
 open /Applications/Radial.app
 ```
 
-Grant **Accessibility** access when prompted in System Settings → Privacy & Security.
-
 ---
 
 ## License
