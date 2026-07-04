@@ -6,9 +6,9 @@
 //
 
 import Testing
-@testable import pinch_control
+@testable import pinch_control_2d
 
-struct pinch_controlTests {
+struct pinch_control_2dTests {
 
     @Test func example() async throws {
         // Write your test here and use APIs like `#expect(...)` to check expected conditions.

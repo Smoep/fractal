@@ -1,0 +1,29 @@
+# Xcode build output
+build/
+build-release/
+DerivedData/
+*.xcarchive
+
+# Profiling
+*.profraw
+*.profdata
+
+# Xcode user-specific files
+xcuserdata/
+*.xcscmblueprint
+*.xccheckout
+
+# Swift Package Manager
+.build/
+.swiftpm/
+
+# CocoaPods
+Pods/
+Podfile.lock
+
+# Carthage
+Carthage/Build/
+
+# macOS
+.DS_Store
+*.orig

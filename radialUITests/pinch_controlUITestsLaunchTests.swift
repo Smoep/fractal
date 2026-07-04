@@ -7,7 +7,7 @@
 
 import XCTest
 
-final class pinch_controlUITestsLaunchTests: XCTestCase {
+final class pinch_control_2dUITestsLaunchTests: XCTestCase {
 
     override class var runsForEachTargetApplicationUIConfiguration: Bool {
         true

@@ -12,37 +12,37 @@
 			containerPortal = 801C18ED2F88C20D00A8F740 /* Project object */;
 			proxyType = 1;
 			remoteGlobalIDString = 801C18F42F88C20D00A8F740;
-			remoteInfo = pinch_control;
+			remoteInfo = radial;
 		};
 		801C190D2F88C20F00A8F740 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 801C18ED2F88C20D00A8F740 /* Project object */;
 			proxyType = 1;
 			remoteGlobalIDString = 801C18F42F88C20D00A8F740;
-			remoteInfo = pinch_control;
+			remoteInfo = radial;
 		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		801C18F52F88C20D00A8F740 /* pinch_control.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = pinch_control.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		801C19022F88C20F00A8F740 /* pinch_controlTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = pinch_controlTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		801C190C2F88C20F00A8F740 /* pinch_controlUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = pinch_controlUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		801C18F52F88C20D00A8F740 /* Radial.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Radial.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		801C19022F88C20F00A8F740 /* radialTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = radialTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		801C190C2F88C20F00A8F740 /* radialUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = radialUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedRootGroup section */
-		801C18F72F88C20D00A8F740 /* pinch_control */ = {
+		801C18F72F88C20D00A8F740 /* radial */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
-			path = pinch_control;
+			path = radial;
 			sourceTree = "<group>";
 		};
-		801C19052F88C20F00A8F740 /* pinch_controlTests */ = {
+		801C19052F88C20F00A8F740 /* radialTests */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
-			path = pinch_controlTests;
+			path = radialTests;
 			sourceTree = "<group>";
 		};
-		801C190F2F88C20F00A8F740 /* pinch_controlUITests */ = {
+		801C190F2F88C20F00A8F740 /* radialUITests */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
-			path = pinch_controlUITests;
+			path = radialUITests;
 			sourceTree = "<group>";
 		};
 /* End PBXFileSystemSynchronizedRootGroup section */
@@ -75,9 +75,9 @@
 		801C18EC2F88C20D00A8F740 = {
 			isa = PBXGroup;
 			children = (
-				801C18F72F88C20D00A8F740 /* pinch_control */,
-				801C19052F88C20F00A8F740 /* pinch_controlTests */,
-				801C190F2F88C20F00A8F740 /* pinch_controlUITests */,
+				801C18F72F88C20D00A8F740 /* radial */,
+				801C19052F88C20F00A8F740 /* radialTests */,
+				801C190F2F88C20F00A8F740 /* radialUITests */,
 				801C18F62F88C20D00A8F740 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -85,9 +85,9 @@
 		801C18F62F88C20D00A8F740 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				801C18F52F88C20D00A8F740 /* pinch_control.app */,
-				801C19022F88C20F00A8F740 /* pinch_controlTests.xctest */,
-				801C190C2F88C20F00A8F740 /* pinch_controlUITests.xctest */,
+				801C18F52F88C20D00A8F740 /* Radial.app */,
+				801C19022F88C20F00A8F740 /* radialTests.xctest */,
+				801C190C2F88C20F00A8F740 /* radialUITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -95,9 +95,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		801C18F42F88C20D00A8F740 /* pinch_control */ = {
+		801C18F42F88C20D00A8F740 /* radial */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 801C19162F88C20F00A8F740 /* Build configuration list for PBXNativeTarget "pinch_control" */;
+			buildConfigurationList = 801C19162F88C20F00A8F740 /* Build configuration list for PBXNativeTarget "radial" */;
 			buildPhases = (
 				801C18F12F88C20D00A8F740 /* Sources */,
 				801C18F22F88C20D00A8F740 /* Frameworks */,
@@ -108,18 +108,18 @@
 			dependencies = (
 			);
 			fileSystemSynchronizedGroups = (
-				801C18F72F88C20D00A8F740 /* pinch_control */,
+				801C18F72F88C20D00A8F740 /* radial */,
 			);
-			name = pinch_control;
+			name = radial;
 			packageProductDependencies = (
 			);
-			productName = pinch_control;
-			productReference = 801C18F52F88C20D00A8F740 /* pinch_control.app */;
+			productName = radial;
+			productReference = 801C18F52F88C20D00A8F740 /* Radial.app */;
 			productType = "com.apple.product-type.application";
 		};
-		801C19012F88C20F00A8F740 /* pinch_controlTests */ = {
+		801C19012F88C20F00A8F740 /* radialTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 801C19192F88C20F00A8F740 /* Build configuration list for PBXNativeTarget "pinch_controlTests" */;
+			buildConfigurationList = 801C19192F88C20F00A8F740 /* Build configuration list for PBXNativeTarget "radialTests" */;
 			buildPhases = (
 				801C18FE2F88C20F00A8F740 /* Sources */,
 				801C18FF2F88C20F00A8F740 /* Frameworks */,
@@ -131,18 +131,18 @@
 				801C19042F88C20F00A8F740 /* PBXTargetDependency */,
 			);
 			fileSystemSynchronizedGroups = (
-				801C19052F88C20F00A8F740 /* pinch_controlTests */,
+				801C19052F88C20F00A8F740 /* radialTests */,
 			);
-			name = pinch_controlTests;
+			name = radialTests;
 			packageProductDependencies = (
 			);
-			productName = pinch_controlTests;
-			productReference = 801C19022F88C20F00A8F740 /* pinch_controlTests.xctest */;
+			productName = radialTests;
+			productReference = 801C19022F88C20F00A8F740 /* radialTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
-		801C190B2F88C20F00A8F740 /* pinch_controlUITests */ = {
+		801C190B2F88C20F00A8F740 /* radialUITests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 801C191C2F88C20F00A8F740 /* Build configuration list for PBXNativeTarget "pinch_controlUITests" */;
+			buildConfigurationList = 801C191C2F88C20F00A8F740 /* Build configuration list for PBXNativeTarget "radialUITests" */;
 			buildPhases = (
 				801C19082F88C20F00A8F740 /* Sources */,
 				801C19092F88C20F00A8F740 /* Frameworks */,
@@ -154,13 +154,13 @@
 				801C190E2F88C20F00A8F740 /* PBXTargetDependency */,
 			);
 			fileSystemSynchronizedGroups = (
-				801C190F2F88C20F00A8F740 /* pinch_controlUITests */,
+				801C190F2F88C20F00A8F740 /* radialUITests */,
 			);
-			name = pinch_controlUITests;
+			name = radialUITests;
 			packageProductDependencies = (
 			);
-			productName = pinch_controlUITests;
-			productReference = 801C190C2F88C20F00A8F740 /* pinch_controlUITests.xctest */;
+			productName = radialUITests;
+			productReference = 801C190C2F88C20F00A8F740 /* radialUITests.xctest */;
 			productType = "com.apple.product-type.bundle.ui-testing";
 		};
 /* End PBXNativeTarget section */
@@ -186,7 +186,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 801C18F02F88C20D00A8F740 /* Build configuration list for PBXProject "pinch_control" */;
+			buildConfigurationList = 801C18F02F88C20D00A8F740 /* Build configuration list for PBXProject "radial" */;
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
 			knownRegions = (
@@ -200,9 +200,9 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				801C18F42F88C20D00A8F740 /* pinch_control */,
-				801C19012F88C20F00A8F740 /* pinch_controlTests */,
-				801C190B2F88C20F00A8F740 /* pinch_controlUITests */,
+				801C18F42F88C20D00A8F740 /* radial */,
+				801C19012F88C20F00A8F740 /* radialTests */,
+				801C190B2F88C20F00A8F740 /* radialUITests */,
 			);
 		};
 /* End PBXProject section */
@@ -258,12 +258,12 @@
 /* Begin PBXTargetDependency section */
 		801C19042F88C20F00A8F740 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 801C18F42F88C20D00A8F740 /* pinch_control */;
+			target = 801C18F42F88C20D00A8F740 /* radial */;
 			targetProxy = 801C19032F88C20F00A8F740 /* PBXContainerItemProxy */;
 		};
 		801C190E2F88C20F00A8F740 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 801C18F42F88C20D00A8F740 /* pinch_control */;
+			target = 801C18F42F88C20D00A8F740 /* radial */;
 			targetProxy = 801C190D2F88C20F00A8F740 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
@@ -398,19 +398,32 @@
 				COMBINE_HIDPI_IMAGES = YES;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = A6CM288C33;
-				ENABLE_APP_SANDBOX = YES;
+				ENABLE_APP_SANDBOX = NO;
 				ENABLE_HARDENED_RUNTIME = YES;
+				ENABLE_INCOMING_NETWORK_CONNECTIONS = NO;
+				ENABLE_OUTGOING_NETWORK_CONNECTIONS = NO;
 				ENABLE_PREVIEWS = YES;
+				ENABLE_RESOURCE_ACCESS_AUDIO_INPUT = NO;
+				ENABLE_RESOURCE_ACCESS_BLUETOOTH = NO;
+				ENABLE_RESOURCE_ACCESS_CALENDARS = NO;
+				ENABLE_RESOURCE_ACCESS_CAMERA = YES;
+				ENABLE_RESOURCE_ACCESS_CONTACTS = NO;
+				ENABLE_RESOURCE_ACCESS_LOCATION = NO;
+				ENABLE_RESOURCE_ACCESS_PRINTING = NO;
+				ENABLE_RESOURCE_ACCESS_USB = NO;
 				ENABLE_USER_SELECTED_FILES = readonly;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_CFBundleIconName = AppIcon;
+				INFOPLIST_KEY_LSUIElement = YES;
+				INFOPLIST_KEY_NSCameraUsageDescription = "Pinch Control uses the camera to detect hand gestures for pinch-to-value mapping.";
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/../Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "com.jos.pinch-control";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+							PRODUCT_BUNDLE_IDENTIFIER = "com.jos.pinch-control-3d";
+							PRODUCT_NAME = "Radial";
 				REGISTER_APP_GROUPS = YES;
 				STRING_CATALOG_GENERATE_SYMBOLS = YES;
 				SWIFT_APPROACHABLE_CONCURRENCY = YES;
@@ -430,19 +443,32 @@
 				COMBINE_HIDPI_IMAGES = YES;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = A6CM288C33;
-				ENABLE_APP_SANDBOX = YES;
+				ENABLE_APP_SANDBOX = NO;
 				ENABLE_HARDENED_RUNTIME = YES;
+				ENABLE_INCOMING_NETWORK_CONNECTIONS = NO;
+				ENABLE_OUTGOING_NETWORK_CONNECTIONS = NO;
 				ENABLE_PREVIEWS = YES;
+				ENABLE_RESOURCE_ACCESS_AUDIO_INPUT = NO;
+				ENABLE_RESOURCE_ACCESS_BLUETOOTH = NO;
+				ENABLE_RESOURCE_ACCESS_CALENDARS = NO;
+				ENABLE_RESOURCE_ACCESS_CAMERA = YES;
+				ENABLE_RESOURCE_ACCESS_CONTACTS = NO;
+				ENABLE_RESOURCE_ACCESS_LOCATION = NO;
+				ENABLE_RESOURCE_ACCESS_PRINTING = NO;
+				ENABLE_RESOURCE_ACCESS_USB = NO;
 				ENABLE_USER_SELECTED_FILES = readonly;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_CFBundleIconName = AppIcon;
+				INFOPLIST_KEY_LSUIElement = YES;
+				INFOPLIST_KEY_NSCameraUsageDescription = "Pinch Control uses the camera to detect hand gestures for pinch-to-value mapping.";
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/../Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "com.jos.pinch-control";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+							PRODUCT_BUNDLE_IDENTIFIER = "com.jos.pinch-control-3d";
+							PRODUCT_NAME = "Radial";
 				REGISTER_APP_GROUPS = YES;
 				STRING_CATALOG_GENERATE_SYMBOLS = YES;
 				SWIFT_APPROACHABLE_CONCURRENCY = YES;
@@ -463,14 +489,14 @@
 				GENERATE_INFOPLIST_FILE = YES;
 				MACOSX_DEPLOYMENT_TARGET = 26.4;
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "com.jos.pinch-controlTests";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.jos.pinch-control-3dTests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				STRING_CATALOG_GENERATE_SYMBOLS = NO;
 				SWIFT_APPROACHABLE_CONCURRENCY = YES;
 				SWIFT_EMIT_LOC_STRINGS = NO;
 				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
 				SWIFT_VERSION = 5.0;
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/pinch_control.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/pinch_control";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/radial_3d.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/radial_3d";
 			};
 			name = Debug;
 		};
@@ -484,14 +510,14 @@
 				GENERATE_INFOPLIST_FILE = YES;
 				MACOSX_DEPLOYMENT_TARGET = 26.4;
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "com.jos.pinch-controlTests";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.jos.pinch-control-3dTests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				STRING_CATALOG_GENERATE_SYMBOLS = NO;
 				SWIFT_APPROACHABLE_CONCURRENCY = YES;
 				SWIFT_EMIT_LOC_STRINGS = NO;
 				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
 				SWIFT_VERSION = 5.0;
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/pinch_control.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/pinch_control";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/radial_3d.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/radial_3d";
 			};
 			name = Release;
 		};
@@ -503,14 +529,14 @@
 				DEVELOPMENT_TEAM = A6CM288C33;
 				GENERATE_INFOPLIST_FILE = YES;
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "com.jos.pinch-controlUITests";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.jos.pinch-control-3dUITests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				STRING_CATALOG_GENERATE_SYMBOLS = NO;
 				SWIFT_APPROACHABLE_CONCURRENCY = YES;
 				SWIFT_EMIT_LOC_STRINGS = NO;
 				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
 				SWIFT_VERSION = 5.0;
-				TEST_TARGET_NAME = pinch_control;
+				TEST_TARGET_NAME = radial;
 			};
 			name = Debug;
 		};
@@ -522,21 +548,21 @@
 				DEVELOPMENT_TEAM = A6CM288C33;
 				GENERATE_INFOPLIST_FILE = YES;
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "com.jos.pinch-controlUITests";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.jos.pinch-control-3dUITests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				STRING_CATALOG_GENERATE_SYMBOLS = NO;
 				SWIFT_APPROACHABLE_CONCURRENCY = YES;
 				SWIFT_EMIT_LOC_STRINGS = NO;
 				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
 				SWIFT_VERSION = 5.0;
-				TEST_TARGET_NAME = pinch_control;
+				TEST_TARGET_NAME = radial;
 			};
 			name = Release;
 		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		801C18F02F88C20D00A8F740 /* Build configuration list for PBXProject "pinch_control" */ = {
+		801C18F02F88C20D00A8F740 /* Build configuration list for PBXProject "radial" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				801C19142F88C20F00A8F740 /* Debug */,
@@ -545,7 +571,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		801C19162F88C20F00A8F740 /* Build configuration list for PBXNativeTarget "pinch_control" */ = {
+		801C19162F88C20F00A8F740 /* Build configuration list for PBXNativeTarget "radial" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				801C19172F88C20F00A8F740 /* Debug */,
@@ -554,7 +580,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		801C19192F88C20F00A8F740 /* Build configuration list for PBXNativeTarget "pinch_controlTests" */ = {
+		801C19192F88C20F00A8F740 /* Build configuration list for PBXNativeTarget "radialTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				801C191A2F88C20F00A8F740 /* Debug */,
@@ -563,7 +589,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		801C191C2F88C20F00A8F740 /* Build configuration list for PBXNativeTarget "pinch_controlUITests" */ = {
+		801C191C2F88C20F00A8F740 /* Build configuration list for PBXNativeTarget "radialUITests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				801C191D2F88C20F00A8F740 /* Debug */,
