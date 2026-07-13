@@ -12,6 +12,10 @@ Unzip and drag **Fractal.app** to your Applications folder.
 
 Touch and hold the trackpad, move through the action tree, then lift. No mouse movement, no keyboard hunting — just one fluid gesture.
 
+<p align="center">
+  <img src="Artwork/Fractal-AppIcon-1024.png" alt="Fractal branching action tree" width="320">
+</p>
+
 ## How it works
 
 1. **Touch & hold** anywhere on the trackpad — a progress ring fills over about 0.6 seconds.
