@@ -1,13 +1,13 @@
-# Track Zone — Lessons Learned & Handover
+# Fractal — Lessons Learned & Handover
 
 A comprehensive reference for building the next macOS gesture-driven utility app.
-Everything we learned building Track Zone — what worked, what didn't, and why.
+Everything we learned building Fractal — what worked, what didn't, and why.
 
 ---
 
 ## Table of Contents
 
-1. [What Track Zone Is](#1-what-track-zone-is)
+1. [What Fractal Is](#1-what-fractal-is)
 2. [UX Principles — What We Got Right](#2-ux-principles)
 3. [Architecture & Code Patterns](#3-architecture--code-patterns)
 4. [macOS System Integration](#4-macos-system-integration)
@@ -26,7 +26,7 @@ Everything we learned building Track Zone — what worked, what didn't, and why.
 
 ---
 
-## 1. What Track Zone Is
+## 1. What Fractal Is
 
 A macOS radial action launcher activated by **touch-and-hold** on the trackpad.
 
@@ -93,7 +93,7 @@ We started with a grid and moved to radial. Radial is better because:
 
 ### 2.9 Keep App Running in Background
 - `applicationShouldTerminateAfterLastWindowClosed` returns `false`
-- Menu bar icon always accessible — "Track Zone Settings" to reopen window
+- Menu bar icon always accessible — "Fractal Settings" to reopen window
 - User closes settings, app keeps listening on trackpad
 
 ---
@@ -103,7 +103,7 @@ We started with a grid and moved to radial. Radial is better because:
 ### 3.1 Component Hierarchy
 
 ```
-pinch_controlApp.swift     App entry + menu bar + dock icon
+FractalApp.swift        App entry + menu bar + dock icon
   └─ ContentView.swift     Settings UI (ScrollView + sliders + editor)
        └─ SessionEngine    Central coordinator (created as @State)
             ├─ AppSettings        User preferences (singleton)
@@ -219,7 +219,7 @@ Menu items: "App Settings" (opens window) + "Quit".
 ### 4.3 Menu-Bar-Only App (No Dock Icon) — Preferred Pattern
 
 The lightest possible macOS utility: lives exclusively in the menu bar, never
-appears in the Dock or the ⌘-Tab app switcher. This is what Radial uses.
+appears in the Dock or the ⌘-Tab app switcher. This is what Fractal uses.
 
 **Step 1 — Info.plist key** (or Build Setting `Application is agent (UIElement)`):
 ```
@@ -290,7 +290,7 @@ window.makeKeyAndOrderFront(nil)
 
 Find the main window by title or identifier:
 ```swift
-NSApp.windows.first(where: { $0.title == "Track Zone" || $0.identifier?.rawValue.contains("main") == true })
+NSApp.windows.first(where: { $0.title == "Fractal" || $0.identifier?.rawValue.contains("main") == true })
 ```
 
 ---
@@ -729,12 +729,13 @@ The same view renders at every depth. Path grows as you go deeper.
 
 ### 11.1 Project Setup
 
-- **Xcode project**: `pinch_control.xcodeproj`, scheme: `pinch_control`
-- **Bundle ID**: `com.jos.pinch-control-3d` (DO NOT CHANGE — accessibility permissions)
-- **Product name**: "Track Zone" (can differ from bundle ID)
+- **Xcode project**: `Fractal.xcodeproj`, scheme: `Fractal`
+- **Bundle ID**: `com.jos.fractal` (DO NOT CHANGE — accessibility permissions)
+- **Product name**: "Fractal"
+- **Signing**: manual ad-hoc (`CODE_SIGN_IDENTITY = "-"`) so local builds do not require a Mac Development certificate.
 - **Target**: macOS 26.4+, arm64
 - **Build system**: `PBXFileSystemSynchronizedRootGroup` — drop `.swift` files in
-  `pinch_control/` folder and they auto-build. No pbxproj edits needed.
+  `Fractal/` folder and they auto-build. No pbxproj edits needed.
 
 ### 11.2 App Icon Asset Catalog — Checklist
 
@@ -767,7 +768,7 @@ commonly missed (it covers the 32×32@2x slot).
 **After deploy, force Launch Services to register the new icon:**
 ```bash
 /System/Library/Frameworks/CoreServices.framework/Versions/A/Frameworks/\
-LaunchServices.framework/Versions/A/Support/lsregister -f -R -trusted /Applications/YourApp.app
+LaunchServices.framework/Versions/A/Support/lsregister -f -R -trusted "/Applications/Fractal.app"
 ```
 This makes Finder and Dock pick up the icon immediately — no `killall Dock` needed.
 
@@ -779,32 +780,32 @@ code stripping. Release builds use `-wholemodule` optimization, stripping, and d
 **Binary size**: 2.7 MB (Release) vs 3.8 MB (Debug) — 30% smaller.
 
 ```bash
-cd /Users/jos/Downloads/apple_data/track_zone
+cd "/Users/jos/projects/mac/Fractal"
 
-xcodebuild -project pinch_control.xcodeproj \
-           -scheme pinch_control \
+xcodebuild -project "Fractal.xcodeproj" \
+           -scheme "Fractal" \
            -configuration Release \
-           -derivedDataPath build-release \
+           -derivedDataPath build-fractal \
            build 2>&1 | grep -E "error:|BUILD" | head -20
 ```
 
-### 11.3 Deploy
+### 11.4 Deploy
 
 ```bash
-pkill -9 "Track Zone" 2>/dev/null
+pkill -9 "Fractal" 2>/dev/null
 sleep 0.5
-rm -rf "/Applications/Track Zone.app"
-cp -R "build-release/Build/Products/Release/Track Zone.app" "/Applications/Track Zone.app"
-open -a "/Applications/Track Zone.app"
+rm -rf "/Applications/Fractal.app"
+cp -R "build-fractal/Build/Products/Release/Fractal.app" "/Applications/Fractal.app"
+open -a "/Applications/Fractal.app"
 ```
 
 **NEVER codesign after deploy** — invalidates accessibility permissions.
 
-### 11.4 Debugging a Running App
+### 11.5 Debugging a Running App
 
 ```bash
 # Find PID
-ps aux | grep "Track Zone"
+ps aux | grep "Fractal"
 
 # Sample CPU usage (5 seconds)
 sample <PID> 5
@@ -913,7 +914,7 @@ These are known but not worth fixing unless they become bottlenecks:
 | Recursive data CRUD | `RadialMenuModel.swift` | Path-based tree operations |
 | NSWindow overlay | `SelectionOverlay.swift` | Borderless, clear, ignoresMouseEvents |
 | CVDisplayLink animation | `CandidateOverlay.swift` | Frame-perfect 60fps without Timer coalescing |
-| Menu bar status item | `pinch_controlApp.swift` | NSStatusItem + NSMenu |
+| Menu bar status item | `FractalApp.swift` | NSStatusItem + NSMenu |
 
 ---
 
@@ -978,8 +979,8 @@ app we're building.
 
 | Component | GestureSign (Windows) | Our macOS equivalent |
 |---|---|---|
-| Input capture | WM_POINTER / WM_TOUCH / RawInput | MultitouchSupport.framework (already built in Track Zone) |
-| Background daemon | `GestureSign.Daemon` (tray app) | Menu bar app (already built in Track Zone) |
+| Input capture | WM_POINTER / WM_TOUCH / RawInput | MultitouchSupport.framework (already built in Fractal) |
+| Background daemon | `GestureSign.Daemon` (tray app) | Menu bar app (already built in Fractal) |
 | Settings UI | `GestureSign.ControlPanel` (WPF) | SwiftUI settings window |
 | Pattern matching | `GestureSign.PointPatterns` | Port the algorithm to Swift |
 | Gesture model | `Gesture` → `PointPattern[]` → `Point[][]` | Swift Codable structs |
@@ -1047,7 +1048,7 @@ automatically when all fingers lift.
 
 #### Record button for keyboard shortcuts (already solved)
 
-Track Zone's `KeyRecorder` pattern works well: click the shortcut field, it
+Fractal's `KeyRecorder` pattern works well: click the shortcut field, it
 shows "Press any key...", captures the next keypress with modifiers, and
 displays the result. Carry this forward as-is. The key lesson: the user should
 always **perform** the thing, never **type** it into a text field.
@@ -1073,11 +1074,11 @@ struct GestureAction: Codable, Identifiable {
     var id: String
     var gestureName: String           // references GestureTemplate.name
     var actionType: ActionType        // keyboard, app, shell, media
-    var actionConfig: ActionConfig    // same as Track Zone's
+    var actionConfig: ActionConfig    // same as Fractal's
 }
 ```
 
-### 16.5 Things to Carry Forward from Track Zone
+### 16.5 Things to Carry Forward from Fractal
 
 | What | Where | Notes |
 |---|---|---|
@@ -1088,7 +1089,7 @@ struct GestureAction: Codable, Identifiable {
 | KeyRecorder | `RadialMenuEditor.swift` | Keyboard shortcut recording — extract to own file |
 | Debounced UserDefaults | `AppSettings.swift` | Settings pattern — copy as-is |
 | Glass UI / overlay | `SelectionOverlay.swift` | Glass slice drawing recipe — adapt for gesture preview |
-| Menu bar + background | `pinch_controlApp.swift` | Menu bar icon + keep-alive pattern |
+| Menu bar + background | `FractalApp.swift` | Menu bar icon + keep-alive pattern |
 | Settings UI helpers | `ContentView.swift` | `SettingsSection`, `SettingsSlider` — copy as-is |
 | Delta-guarded @Observable | `SessionEngine.swift` | Pattern — always use for high-frequency updates |
 

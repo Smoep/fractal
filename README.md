@@ -1,30 +1,24 @@
-# Radial
+# Fractal
 
-**A macOS radial action launcher driven entirely by your trackpad.**
+**A macOS fractal-tree action launcher driven entirely by your trackpad.**
 
-## Download
-
-[**→ Download Radial.zip from the latest release**](https://github.com/Smoep/radial/releases/latest)
-
-Unzip and drag **Radial.app** to your Applications folder.
+This checkout builds **Fractal.app** with bundle id `com.jos.fractal`, separate from the sibling **Radial.app** project.
 
 > **First launch:** macOS will show a security warning because the app is not signed with an Apple Developer certificate.
 > Right-click (or Control-click) the app → **Open** → **Open**. You only need to do this once.
 
-Touch and hold the trackpad, slide your finger to the action you want, then lift. No mouse movement, no keyboard hunting — just one fluid gesture.
-
-![Radial Menu Concept](Radial%20Menu%20Concept%20Dma.jpg)
+Touch and hold the trackpad, move through the branching action tree, then lift. No keyboard hunting, just one fluid gesture.
 
 ---
 
 ## How it works
 
 1. **Touch & hold** anywhere on the trackpad — a progress ring fills over ~0.6 s.
-2. **The pie menu appears** at your cursor, organized in concentric rings.
-3. **Slide outward** to a category slice, then further out to an action.
+2. **The tree appears** at your cursor, with categories fanning from a short trunk.
+3. **Move through branches** to reveal actions and deeper subcategories.
 4. **Lift your finger** — the action fires instantly.
 
-The center of the menu is always a cancel zone. Your finger never leaves the trackpad.
+The tree root is always a cancel zone. Your finger never leaves the trackpad.
 
 ---
 
@@ -58,12 +52,11 @@ The center of the menu is always a cancel zone. Your finger never leaves the tra
 ## Build & install
 
 ```bash
-git clone https://github.com/Smoep/radial.git
-cd radial
-xcodebuild -project pinch_control.xcodeproj -scheme radial -configuration Release \
-  -derivedDataPath build-release build
-cp -R build-release/Build/Products/Release/Radial.app /Applications/Radial.app
-open /Applications/Radial.app
+cd "/Users/jos/projects/mac/Fractal"
+xcodebuild -project "Fractal.xcodeproj" -scheme "Fractal" -configuration Release \
+  -derivedDataPath build-fractal build
+cp -R "build-fractal/Build/Products/Release/Fractal.app" "/Applications/Fractal.app"
+open "/Applications/Fractal.app"
 ```
 
 ---

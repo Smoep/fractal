@@ -1,7 +1,10 @@
 # Xcode build output
 build/
 build-release/
+build-radial-tree/
+build-fractal/
 DerivedData/
+tmp/
 *.xcarchive
 
 # Profiling

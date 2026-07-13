@@ -1,4 +1,4 @@
-# Track Zone — Lessons Learned
+# Fractal — Lessons Learned
 
 Short, practical notes. Only confirmed, tested things.
 
@@ -50,8 +50,11 @@ Copies entire array every tick. Fix: mutate in-place.
 **Codesigning after deploying to `/Applications/`**
 Invalidates accessibility permissions — macOS sees it as a new app identity. Never re-codesign a deployed binary.
 
+**Use ad-hoc signing for local builds**
+The project is configured with `CODE_SIGN_IDENTITY = "-"` so Release builds do not require a Mac Development certificate.
+
 **Changing the bundle ID**
-Breaks previously granted accessibility permissions. Bundle ID is `com.jos.pinch-control-3d` — do not touch.
+Breaks previously granted accessibility permissions. Bundle ID is `com.jos.fractal` — do not touch.
 
 **AppleScript for keyboard shortcuts**
 ~100 ms latency. Fix: CGEvent for all keyboard posting (instant).
@@ -68,33 +71,33 @@ Doesn't work globally. Must use `MultitouchSupport.framework` via dlopen.
 
 **Build Release:**
 ```bash
-cd /Users/jos/Downloads/apple_data/track_zone
+cd "/Users/jos/projects/mac/Fractal"
 
-xcodebuild -project pinch_control.xcodeproj \
-           -scheme pinch_control \
+xcodebuild -project "Fractal.xcodeproj" \
+           -scheme "Fractal" \
            -configuration Release \
-           -derivedDataPath build-release \
+           -derivedDataPath build-fractal \
            build 2>&1 | grep -E "error:|BUILD" | head -20
 ```
 
 **Deploy:**
 ```bash
-pkill -9 "Track Zone" 2>/dev/null
+pkill -9 "Fractal" 2>/dev/null
 sleep 0.5
-rm -rf "/Applications/Track Zone.app"
-cp -R "build-release/Build/Products/Release/Track Zone.app" "/Applications/Track Zone.app"
-open -a "/Applications/Track Zone.app"
+rm -rf "/Applications/Fractal.app"
+cp -R "build-fractal/Build/Products/Release/Fractal.app" "/Applications/Fractal.app"
+open -a "/Applications/Fractal.app"
 ```
 
 **Check CPU usage (5-second sample):**
 ```bash
-ps aux | grep "Track Zone"   # get PID
+ps aux | grep "Fractal"   # get PID
 sample <PID> 5
 ```
 Good: `mach_msg2_trap` samples > 70% (idle). Bad: Timer callback or Canvas > 5%.
 
 **Add a new Swift file:**
-Drop `.swift` into `pinch_control/` folder — it auto-builds via `PBXFileSystemSynchronizedRootGroup`. No pbxproj edits needed.
+Drop `.swift` into `Fractal/` folder — it auto-builds via `PBXFileSystemSynchronizedRootGroup`. No pbxproj edits needed.
 
 ---
 
