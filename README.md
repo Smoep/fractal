@@ -11,6 +11,12 @@ Touch and hold the trackpad, move through the branching action tree, then lift. 
 
 ---
 
+## Download
+
+Download [Fractal.zip](https://github.com/Smoep/fractal/releases/latest/download/Fractal.zip), unzip it, and move **Fractal.app** to your Applications folder.
+
+---
+
 ## How it works
 
 1. **Touch & hold** anywhere on the trackpad — a progress ring fills over ~0.6 s.
